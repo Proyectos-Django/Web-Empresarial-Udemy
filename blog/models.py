@@ -22,7 +22,7 @@ class Post(models.Model):
     published = models.DateTimeField(verbose_name='Fecha de publicación', default=now) # tiempo hora zona horaria actual
     image = models.ImageField(verbose_name='Imagen', upload_to='blog', null=True, blank=True) # para decirle al usuario si coloque o no la imagen
     author = models.ForeignKey(User, verbose_name='Autor', on_delete=models.CASCADE)# si se elimina un autor se elimina en todo lo que este relacionado
-    categories = models.ManyToManyField(Category, verbose_name= 'Categorias')
+    categories = models.ManyToManyField(Category, verbose_name= 'Categorías', related_name='get_posts')
     created = models.DateTimeField(auto_now_add=True, verbose_name='Fecha de Creación')
     updated = models.DateTimeField(auto_now=True, verbose_name='Fecha de edición')
 
