@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     #apps webempresa
     'blog',
     'core',
+    'pages.apps.PagesConfig',
     'services.apps.ServicesConfig',
     'social.apps.SocialConfig',
 ]
@@ -70,6 +71,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                #app social
+                'social.processors.ctx_dict',
             ],
         },
     },
