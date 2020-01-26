@@ -1,0 +1,1 @@
+pip install django-ckeditor => para edicion de campo en admin
